@@ -37,7 +37,7 @@ int _strcmp(char *s1, char *s2)
 	if (*s1 == *s2)
 		return (0);
 	else
-
+		return (*s1 < *s2 ? -1 : 1);
 }
 
 /**
@@ -54,12 +54,14 @@ char *starts_with(const char *haystack, const char *needle)
 			return (NULL);
 	return ((char *)haystack);
 }
+
 /**
  * _strcat - concatenates two strings
  * @dest: the destination buffer
  * @src: the source buffer
  *
  * @src: the source buffer
+ * Return: the catted str
  */
 char *_strcat(char *dest, char *src)
 {
